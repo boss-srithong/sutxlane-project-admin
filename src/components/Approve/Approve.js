@@ -135,12 +135,12 @@ const Approve = ({navigation}) => {
                     <Button
                         title="Approve"
                         color="#2c3949"
-                        onPress={() => Alert.alert('Simple Button pressed')}
+                        onPress={() => alert('Approve')}
                     />
                     <Button
                         title="Approve All"
                         color="grey"
-                        onPress={() => Alert.alert('Button with adjusted color pressed')}
+                        onPress={() => alert('Approve All')}
                     />
                 </View>
             </View>
