@@ -20,7 +20,7 @@ const Approve = ({navigation}) => {
                 <ScrollView >
                     <View style={styles.news}>
                         <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                            <Image source={{uri:'https://www.tqm.co.th/gallery/3637.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
+                            <Image source={{uri:'https://static.posttoday.com/media/content/2018/11/12/D8359A2BC6B14AE981163E677F466165.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                         </View>
                         <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
                             <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
@@ -48,7 +48,7 @@ const Approve = ({navigation}) => {
                     </View>
                     <View style={styles.news}>
                         <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                            <Image source={{uri:'https://www.tqm.co.th/gallery/3637.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
+                            <Image source={{uri:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                         </View>
                         <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
                             <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
@@ -76,7 +76,7 @@ const Approve = ({navigation}) => {
                     </View>
                     <View style={styles.news}>
                         <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                            <Image source={{uri:'https://www.tqm.co.th/gallery/3637.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
+                            <Image source={{uri:'https://th1-cdn.pgimgs.com/listing/7974167/UPHO.76563246.R400X300/Blossom-Condo-Sathorn-Charoenrat-%E0%B8%9A%E0%B8%A5%E0%B8%AD%E0%B8%AA%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%A1-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8E%E0%B8%A3%E0%B9%8C-%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3-Thailand.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                         </View>
                         <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
                             <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
@@ -104,7 +104,7 @@ const Approve = ({navigation}) => {
                     </View>
                     <View style={styles.news}>
                         <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                            <Image source={{uri:'https://www.tqm.co.th/gallery/3637.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
+                            <Image source={{uri:'https://www.origin.co.th/wp-content/uploads/2019/08/DSC3469-1024x683.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                         </View>
                         <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
                             <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
