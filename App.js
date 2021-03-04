@@ -9,7 +9,7 @@ import RNBootSplash from "react-native-bootsplash";
 import Login from './src/components/login/Login'
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import {  faHome , faPlusCircle, faMapMarker ,faHeart ,faUser} from '@fortawesome/free-solid-svg-icons'
+import { faHome , faPlusCircle, faMapMarker ,faHeart ,faUser, faUserEdit} from '@fortawesome/free-solid-svg-icons'
 
 import Home from './src/components/Home/Home';
 import DetailHome from './src/components/Home/DetailHome';
@@ -71,12 +71,32 @@ const TabSctack =()=>{
         }}
       />
       <Tab.Screen
+        name="NearMe"
+        component={NearMe}
+        options={{
+          tabBarLabel: 'Near Me',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesomeIcon icon={faMapMarker}  color={color} size={size}/>
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          tabBarLabel: 'Favorites',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesomeIcon icon={faHeart}  color={color} size={size}/>
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Approve"
         component={Approve}
         options={{
           tabBarLabel: 'Approve',
           tabBarIcon: ({ color, size }) => (
-            <FontAwesomeIcon icon={faHeart}  color={color} size={size}/>
+            <FontAwesomeIcon icon={faUserEdit}  color={color} size={size}/>
           ),
         }}
       />

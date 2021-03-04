@@ -30,6 +30,75 @@ const Home = ({navigation}) => {
        
     }, [])
 
+    const [mockup_data] = useState([
+        {
+          id:1,
+          image:'https://static.posttoday.com/media/content/2018/11/12/D8359A2BC6B14AE981163E677F466165.jpg',
+          type: 'condo',
+          price: '฿ 2,700,000',
+          num_room: 1,
+          num_bath: 1,
+          desc: 'Set around a lake at the foot of a hill less than 400 meters from the beach in Kamala, this development of stylishcondominiums offers 235 beautifully designed condominium apartments.',
+        },
+        {
+          id:2,
+          image:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg',
+          type: 'condo',
+          price: '฿ 5,900,00',
+          num_room: 2,
+          num_bath: 1,
+          desc: ' Offer 175 sq.m. A fully furnished condo on a stunning waterfront. Biggest property with direct beach access.',
+        },
+        {
+          id:3,
+          image:'https://th1-cdn.pgimgs.com/listing/7974167/UPHO.76563246.R400X300/Blossom-Condo-Sathorn-Charoenrat-%E0%B8%9A%E0%B8%A5%E0%B8%AD%E0%B8%AA%E0%B8%8B%E0%B8%B1%E0%B9%88%E0%B8%A1-%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8E%E0%B8%A3%E0%B9%8C-%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3-Thailand.jpg',
+          type: 'Apartment',
+          price: '฿ 6,300,000',
+          num_room: 3,
+          num_bath: 2,
+          desc: 'Offer 175 sq.m. A fully furnished condo on a stunning waterfront. Biggest property with direct beach access.',
+        },
+        {
+          id:4,
+          image:'https://www.origin.co.th/wp-content/uploads/2019/08/DSC3469-1024x683.jpg',
+          type: 'Apartment',
+          price: '฿ 1,900,000',
+          num_room: 2,
+          num_bath: 2,
+          desc: 'Allsopp & Allsopp are proud to present this stunning 1 bedroom apartment. Set in the extremely desirable Executive Tower, complete with mall on your doorstep, kids play area and park along with a gym and pool in the building itself. Great location for a family, to meet friends and amazing community feel. Almost penthouse level floor!',
+        },
+        {
+          id:5,
+          image:'https://static.posttoday.com/media/content/2018/11/12/D8359A2BC6B14AE981163E677F466165.jpg',
+          type: 'condo',
+          price: '฿ 2,700,000',
+          num_room: 1,
+          num_bath: 1,
+          desc: 'Set around a lake at the foot of a hill less than 400 meters from the beach in Kamala, this development of stylishcondominiums offers 235 beautifully designed condominium apartments.',
+        }
+    ])
+
+    const [mockup_data2] = useState([
+        {
+          id:1,
+          image:'https://static.posttoday.com/media/content/2018/11/12/D8359A2BC6B14AE981163E677F466165.jpg',
+          type: 'condo',
+          price: '฿ 2,700,000',
+          num_room: 1,
+          num_bath: 1,
+          desc: 'Set around a lake at the foot of a hill less than 400 meters from the beach in Kamala, this development of stylishcondominiums offers 235 beautifully designed condominium apartments.',
+        },
+        {
+          id:2,
+          image:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg',
+          type: 'condo',
+          price: '฿ 5,900,00',
+          num_room: 2,
+          num_bath: 1,
+          desc: ' Offer 175 sq.m. A fully furnished condo on a stunning waterfront. Biggest property with direct beach access.',
+        },
+    ])
+
     return (
         <SafeAreaView style={styles.main} >
             <View style={styles.input}>
@@ -62,98 +131,32 @@ const Home = ({navigation}) => {
                             </TouchableOpacity>
                         </View>
                         <ScrollView  style={{borderTopWidth:1}}>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.homenayoo.com/wp-content/uploads/2019/09/Gladden-Condo-Ladprao-1.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <Text>฿ 5,900,000</Text>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
+                            {   
+                                mockup_data.map((item, index) => (
+                                    <View style={styles.news}>
+                                        <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
+                                            <Image source={{uri:item.image}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                                         </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.theriver-condo.com/wp-content/uploads/2015/04/The-River-Bangkok-condo-for-rent-1.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <Text>฿ 5,900,000</Text>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
+                                        <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
+                                            <Text>{item.price}</Text>
+                                            <View style={{flexDirection:'row',}}>
+                                                <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                                                    <Text>{item.num_room}</Text>
+                                                    <View style={{width:5}}/>
+                                                    <FontAwesomeIcon icon={faBed} />
+                                                </View>
+                                                <View style={{width:10}}/>
+                                                <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                                                    <Text>{item.num_bath}</Text>
+                                                    <View style={{width:5}}/>
+                                                    <FontAwesomeIcon icon={faBath} />
+                                                </View>
+                                            </View>
+                                            <Text numberOfLines={4}  style={{width:"100%"}}>{item.desc}</Text>
                                         </View>
                                     </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.theriver-condo.com/wp-content/uploads/2015/04/The-River-Bangkok-condo-for-rent-1.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <Text>฿ 5,900,000</Text>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.theriver-condo.com/wp-content/uploads/2015/04/The-River-Bangkok-condo-for-rent-1.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <Text>฿ 5,900,000</Text>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
+                                ))
+                            }   
                         </ScrollView>
                     </React.Fragment>
                 ):(
@@ -167,118 +170,37 @@ const Home = ({navigation}) => {
                             </TouchableOpacity>
                         </View>
                         <ScrollView style={{borderTopWidth:1}}>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://cloud.ctbuh.org/global-news/2020-09/Risland_GN.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-                                        <Text>฿ 5,900,000</Text>
-                                        <TouchableOpacity onPress={()=>navigation.navigate("EditProperty")}>
-                                            <FontAwesomeIcon icon={faEdit} color="tomato"/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
+                            {
+                                mockup_data.map((item, index) => (                         
+                                    <View style={styles.news}>
+                                        <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
+                                            <Image source={{uri:item.image}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
                                         </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-                                        <Text>฿ 5,900,000</Text>
-                                        <TouchableOpacity onPress={()=>navigation.navigate("EditProperty")}>
-                                            <FontAwesomeIcon icon={faEdit} color="tomato"/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
+                                        <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
+                                            <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
+                                                <Text>{item.price}</Text>
+                                                <TouchableOpacity onPress={()=>navigation.navigate("EditProperty")}>
+                                                    <FontAwesomeIcon icon={faEdit} color="tomato"/>
+                                                </TouchableOpacity>
+                                            </View>
+                                            <View style={{flexDirection:'row',}}>
+                                                <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                                                    <Text>{item.num_room}</Text>
+                                                    <View style={{width:5}}/>
+                                                    <FontAwesomeIcon icon={faBed} />
+                                                </View>
+                                                <View style={{width:10}}/>
+                                                <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                                                    <Text>{item.num_bath}</Text>
+                                                    <View style={{width:5}}/>
+                                                    <FontAwesomeIcon icon={faBath} />
+                                                </View>
+                                            </View>
+                                            <Text numberOfLines={4}  style={{width:"100%"}}>{item.desc}</Text>
                                         </View>
                                     </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-                                        <Text>฿ 5,900,000</Text>
-                                        <TouchableOpacity onPress={()=>navigation.navigate("EditProperty")}>
-                                            <FontAwesomeIcon icon={faEdit} color="tomato"/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
-                            <View style={styles.news}>
-                                <View style={{width:"50%",backgroundColor:'grey',height:"100%"}}>
-                                    <Image source={{uri:'https://www.sansiri.com/uploads/gallery/2018/07/17/650_4a38d314-0065-4cdf-90c8-94096629ecc7.jpg'}} style={{width:"100%",height:"100%",resizeMode:'cover'}} />
-                                </View>
-                                <View style={{flexDirection:'column',width:"50%",marginLeft:10}}>
-                                    <View style={{width:"90%",alignItems:'center',justifyContent:'space-between',flexDirection:'row'}}>
-                                        <Text>฿ 5,900,000</Text>
-                                        <TouchableOpacity onPress={()=>navigation.navigate("EditProperty")}>
-                                            <FontAwesomeIcon icon={faEdit} color="tomato"/>
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={{flexDirection:'row',}}>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBed} />
-                                        </View>
-                                        <View style={{width:10}}/>
-                                        <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
-                                            <Text>2</Text>
-                                            <View style={{width:5}}/>
-                                            <FontAwesomeIcon icon={faBath} />
-                                        </View>
-                                    </View>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lsufdsfdsmdoumxplica</Text>
-                                    <Text numberOfLines={1}  style={{width:"100%"}}>Lfdfdfipsufdsfdsmdod</Text>
-                                </View>
-                            </View>
+                                ))
+                            }
                         </ScrollView>
                     </React.Fragment>
                 )}

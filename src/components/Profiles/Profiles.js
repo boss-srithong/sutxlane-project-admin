@@ -1,4 +1,4 @@
-import React ,{useEffect}from 'react'
+import React ,{useState, useEffect}from 'react'
 import { View, Text ,Button, Dimensions, Image, ImageBackground, KeyboardAvoidingView, TouchableOpacity} from 'react-native'
 import { FlatList, ScrollView, TextInput } from 'react-native-gesture-handler'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
@@ -11,13 +11,13 @@ import {userFacebookValue} from '../../slice/dataUser'
 const width = Dimensions.get('window').width/384
 const height = Dimensions.get('window').height/781.3333333333334
 const Profile = ({navigation}) => {
-    const userData = useSelector(userFacebookValue)
-    useEffect(() => {
-        console.log("userData",userData);
-        return () => {
+    // const userData = useSelector(userFacebookValue)
+    // useEffect(() => {
+    //     console.log("userData",userData);
+    //     return () => {
             
-        }
-    }, [])
+    //     }
+    // }, [])
     const logout = () =>{
         navigation.replace("login")
             // var current_access_token = userData.token;
@@ -46,6 +46,16 @@ const Profile = ({navigation}) => {
             //   console.log(error)
             // });      
     }
+
+    const [userData] = useState([
+        {
+            id:1,
+            name: 'Firstname Lastname',
+            email: 'Test@gmailcom',
+            phone: '099999999',
+        }
+    ])
+
     return (
         <KeyboardAwareScrollView style={{flex:1,padding:20}} extraHeight={200} >
             <ScrollView contentContainerStyle={{flex:1,position:'relative'}}  bounces={false}>
@@ -57,10 +67,10 @@ const Profile = ({navigation}) => {
                 <View  style={{height:height*250,padding:width*20,alignItems:'center',justifyContent:'space-evenly'}}>
                     {/* <Text>{userData.name !=="" ? userData.name:"Firstname Lastname"}</Text>
                     <Text>{userData.email !=='' ?userData.email : "Test@gmailcom" }</Text>
-                    <Text style={{fontFamily:'Kanit-Regular'}}>สวัสดี {userData.name}</Text> */}
-                    <Text>Firstname Lastname</Text>
-                    <Text>test@gmail.com</Text>
-                    <Text style={{fontFamily:'Kanit-Regular'}}>เบอร์โทร 0958424541</Text>
+                    <Text style={{fontFamily:'Kanit-Regular'}}>สวัสดี {userData.name}</Text>  */}
+                    <Text>{userData.name}</Text>
+                    <Text>{userData.email}</Text>
+                    <Text style={{fontFamily:'Kanit-Regular'}}>เบอร์โทร {userData.email}</Text>
                 </View>
                 
             </ScrollView>
